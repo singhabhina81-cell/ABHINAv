@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects - Video Section</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .project-container {
+      width: 100%;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: auto;
+    }
+
+    .project {
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f8faff;
+      border: 1px solid #d0e0ff;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-header {
+      background: linear-gradient(120deg, #66a6ff, #89f7fe);
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .project-content {
+      display: none;
+      padding: 15px;
+      background: white;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .project-header {
+        font-size: 1rem;
+      }
+      iframe {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 MY PROJECTS</h1>
+
+  <div class="project-container">
+    <!-- Example Project 1 -->
+    <div class="project">
+      <div class="project-header">
+        Typing Game Project <span class="arrow">▶</span>
+      </div>
+      <div class="project-content">
+        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Example Project 2 -->
+    <div class="project">
+      <div class="project-header">
+        Science Model - Volcano Experiment <span class="arrow">▶</span>
+      </div>
+      <div class="project-content">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Example Project 3 -->
+    <div class="project">
+      <div class="project-header">
+        Robotics Project - Line Follower Robot <span class="arrow">▶</span>
+      </div>
+      <div class="project-content">
+        <iframe src="https://www.youtube.com/embed/J---aiyznGQ" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Add more projects below -->
+    <div class="project">
+      <div class="project-header">
+        Website Portfolio Demo <span class="arrow">▶</span>
+      </div>
+      <div class="project-content">
+        <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const headers = document.querySelectorAll(".project-header");
+
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const arrow = header.querySelector(".arrow");
+        content.style.display = content.style.display === "block" ? "none" : "block";
+        arrow.classList.toggle("rotate");
+      });
+    });
+  </script>
+</body>
+</html>
