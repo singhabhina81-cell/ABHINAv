@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inline Menu Bar</title>
+  <style>
+    :root{
+      --menu-bg: #000000;    
+      --menu-text: #ffffff;  
+      --menu-accent: #1e90ff;
+      --radius: 12px;        
+      --gap: 1rem;           
+      --padding: 0.5rem 1rem;
+      --shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 24px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f3f4f6;
+      color: #111;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items:center ;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+
+    nav.menu-pill {
+      background: var(--menu-bg);
+      color: var(--menu-text);
+      border-radius: var(--radius);
+      padding: 6px;
+      box-shadow: var(--shadow);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    nav .menu {
+      list-style: none;
+      display: inline-flex;
+      gap: var(--gap);
+      margin: 0;
+      padding: 0 var(--padding);
+      align-items: center;
+    }
+
+    nav .menu li a {
+      text-decoration: none;
+      color: var(--menu-text);
+      padding: 8px 10px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: 600;
+      transition: transform .12s ease, background-color .12s ease;
+    }
+
+    nav .menu li a:hover,
+    nav .menu li a:focus {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    nav .menu li a.active {
+      box-shadow: inset 0 -3px 0 0 var(--menu-accent);
+    }
+
+    /* 👇 Logo image (instead of AbhinavSite) */
+    .brand-logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .hamburger {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--menu-text);
+      font-size: 20px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 640px) {
+      nav.menu-pill {
+        padding-right: 6px;
+      }
+      .hamburger { display: inline-flex; }
+      nav .menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 12px;
+        flex-direction: column;
+        background: var(--menu-bg);
+        padding: 8px;
+        border-radius: calc(var(--radius) / 1.2);
+        display: none;
+        min-width: 160px;
+        box-shadow: var(--shadow);
+      }
+      nav .menu.show { display: flex; }
+      nav .menu li a { padding: 10px 12px; }
+    }
+
+    a:focus { box-shadow: 0 0 0 3px rgba(30,144,255,0.15); }
+
+   .p1{ border: 2px solid black;
+         padding-left: 29px;
+        border-radius: 20px;
+        background-color: coral;
+
+        
+              }
+
+
+             .p2 { border: 2px solid black;
+                   border-radius: 20px;
+                   background-color: yellow;
+                   padding-left: 10px;
+
+ }
+
+
+               .p3{
+                    border: 2px solid black;
+                    border-radius: 20px;
+                    background-color: aqua;
+                    padding-left: 7px;
+               }
+
+             
+                         
+                
+                
+                
+                
+
+                    
+
+  
+  </style>
+</head>
+<body style="background-color: skyblue;">
+
+  <div class="nav-wrap">
+    <!-- 👇 Image replaces AbhinavSite -->
+    <a href="" aria-label="Home">
+      <img src="C:\Users\akyab\Downloads\ChatGPT Image Oct 10, 2025, 10_48_32 PM (1).png" alt="logo" class="brand-logo">
+    </a>
+
+    <nav class="menu-pill" aria-label="Main navigation">
+      <button class="hamburger" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <ul class="menu" id="main-menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#home" class="active">Home</a></li>
+        <!-- <li role="none"><a role="menuitem" href="#courses">Courses</a></li> -->
+        <li role="none"><a role="menuitem" href="project.html">Projects</a></li>
+        <li role="none"><a role="menuitem" href="C:\Users\akyab\Desktop\index.html">Typing Game </a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+         <li role="none"><a role="menuitem" href="about.html">About me</a></li>
+        <!-- <li role="none"><a role="menuitem" href="#contact">Contact</a></li> -->
+      </ul>
+    </nav>
+  </div>
+
+  <main style="max-width:900px;margin:24px auto;">
+    <h1 style="color: gold;"><center><underline>Unlock Your Future Now </underline></center></h1>
+    <p style="font-size:large;"> <div class="p1"> Hillow everyone we know that this Future Genration is Toatly dependent on machine or technologies So If we dependent on technology then we also need to put some effort for our world by making a world easier By devloping something that make life easiy like Inovation and build learning app </div> <br>
+<br><div class="p2">
+ On this Website I show My encourgement,dedication because I want to do something for our Nation. Today our knowledge becomes just theory. Life is not meant to be lived only through pages; it must be experienced. Books teach us ideas, but real life shows us how to use them. A person who studies without living becomes like a robot, full of words but empty of understanding. We should learn from books and then apply that learning in the real world. When we connect lessons from books with real experiences, our knowledge becomes meaningful and powerful. True education happens when theory meets practice in daily life.
+ so thats why on this website we learn many thing by playing game we do real  experiment or we also know today coding ,computer knowledge is important So Thats Why I make one Game where Small Children learn typing by playing or they learn also they fun also
+ I will also try to upload video for learning Coading Real experiment.
+ </div><br>
+<br><div class="p3">
+
+Our goal is simple: to help you not just understand theory, but to use it for creating amazing things. Every small project you complete will give you confidence, and every new concept you master will take you one step closer to becoming a creator. </div><br>
+<br> 
+<br>
+<br> 
+<br>
+
+    </p></main>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('.hamburger');
+      const menu = document.getElementById('main-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', () => {
+        const show = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', show ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('show')) return;
+        if (menu.contains(e.target) || btn.contains(e.target)) return;
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('show')) {
+          menu.classList.remove('show');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+
+     
